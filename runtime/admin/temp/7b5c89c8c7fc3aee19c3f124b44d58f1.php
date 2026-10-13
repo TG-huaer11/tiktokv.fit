@@ -1,0 +1,120 @@
+<?php /*a:4:{s:58:"/www/wwwroot/tiktokv.fit/app/admin/view/goods/appoint.html";i:1678404848;s:59:"/www/wwwroot/tiktokv.fit/app/admin/view/layout/default.html";i:1716492206;s:56:"/www/wwwroot/tiktokv.fit/app/admin/view/common/meta.html";i:1716492208;s:58:"/www/wwwroot/tiktokv.fit/app/admin/view/common/script.html";i:1716492208;}*/ ?>
+<!DOCTYPE html>
+<html lang="<?php echo htmlentities($config['language']); ?>">
+    <head>
+        <meta charset="utf-8">
+<title><?php echo htmlentities((isset($title) && ($title !== '')?$title:'')); ?></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta name="referrer" content="never">
+<meta name="referrer" content="no-referrer">
+<link rel="shortcut icon" href="/assets/img/favicon.ico"/>
+<!-- Loading Bootstrap -->
+<link href="/assets/css/backend<?php echo app('request')->env('app_debug')?'':'.min'; ?>.css?v=<?php echo htmlentities(config('site.version')); ?>"
+      rel="stylesheet">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+<script src="/assets/js/html5shiv.js"></script>
+<script src="/assets/js/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    var require = {
+        config: <?php echo json_encode($config); ?>
+    };
+</script>
+    </head>
+
+    <body class="inside-header inside-aside <?php echo defined('IS_DIALOG') && IS_DIALOG ? 'is-dialog' : ''; ?>">
+        <div id="main" role="main">
+            <div class="tab-content tab-addtabs">
+                <div id="content">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <section class="content-header hide">
+                                <h1>
+                                    <?php echo __('Dashboard'); ?>
+                                    <small><?php echo __('Control panel'); ?></small>
+                                </h1>
+                            </section>
+                            <?php if(!IS_DIALOG && !config('fastadmin.multiplenav') && config('fastadmin.breadcrumb')): ?>
+                            <!-- RIBBON -->
+                            <div id="ribbon">
+                                <ol class="breadcrumb pull-left">
+                                    <?php if($auth->check('dashboard')): ?>
+                                    <li><a href="dashboard" class="addtabsit"><i class="fa fa-dashboard"></i> <?php echo __('Dashboard'); ?></a></li>
+                                    <?php endif; ?>
+                                </ol>
+                                <ol class="breadcrumb pull-right">
+                                    <?php foreach($breadcrumb as $vo): ?>
+                                    <li><a href="javascript:;" data-url="<?php echo htmlentities($vo['url']); ?>"><?php echo htmlentities($vo['title']); ?></a></li>
+                                    <?php endforeach; ?>
+                                </ol>
+                            </div>
+                            <!-- END RIBBON -->
+                            <?php endif; ?>
+                            <div class="content">
+                                <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Goods_name'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <?php echo htmlentities($row['goods_name']); ?>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Goods_price'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <?php echo htmlentities($row['goods_price']); ?>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="c-user_id" class="control-label col-xs-12 col-sm-2"><?php echo __('指派用户'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_id" data-rule="required" class="form-control selectpage" name="row[user_id]" data-source="user.user/index" data-field="username" data-format-item="用户名：【{username}】，手机号：【{tel}】" data-params='{"custom[status]":"1"}' type="text">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="c-number" class="control-label col-xs-12 col-sm-2"><?php echo __('指派数量'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-number" data-rule="required" class="form-control" name="row[number]" type="text" value="1">
+        </div>
+    </div>
+
+    <?php if($type == 2): ?>
+    <div class="form-group">
+        <label for="c-price" class="control-label col-xs-12 col-sm-2"><?php echo __('Goods_price'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-price" class="form-control" name="row[price]" type="text">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="c-commission" class="control-label col-xs-12 col-sm-2"><?php echo __('佣金'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-commission"class="form-control" name="row[commission]" type="text">
+        </div>
+    </div>
+    <?php endif; ?>
+
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled"><?php echo __('OK'); ?></button>
+            <button type="reset" class="btn btn-default btn-embossed"><?php echo __('Reset'); ?></button>
+        </div>
+    </div>
+</form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/assets/js/require<?php echo app('request')->env('app_debug')?'':'.min'; ?>.js"
+        data-main="/assets/js/require-backend<?php echo app('request')->env('app_debug')?'':'.min'; ?>.js?v=<?php echo htmlentities($site['version']); ?>"></script>
+    </body>
+</html>
