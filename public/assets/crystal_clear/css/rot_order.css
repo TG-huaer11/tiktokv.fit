@@ -1,0 +1,13 @@
+.desc {
+    margin: 15px;
+    padding-top: 32px;
+    text-align: start;
+}
+
+.desc-text {
+    font-size: 14px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #FD3075;
+    line-height: 14px;
+}

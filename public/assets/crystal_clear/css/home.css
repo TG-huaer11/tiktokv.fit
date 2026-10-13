@@ -1,0 +1,72 @@
+.header-banner {
+    margin: 10px 16px 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 150px;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 150px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.reward {
+    margin-top: 10px;
+}
+
+.reward-title {
+    font-size: .48rem;
+    font-weight: 600;
+    margin-left: .426667rem;
+    margin-bottom: .32rem;
+    height: .64rem;
+    line-height: .64rem
+}
+
+.reward-list {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reward-item {
+    height: 64px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    font-size: 12px;
+}
+
+.reward-item img {
+    width: 32px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.reward-item div:first-child {
+    margin-left: 15px;
+}
+
+.reward-item span:nth-child(2) {
+    margin-left: 5px;
+}
+
+.reward-item span:nth-child(3) {
+    margin-left: 5px;
+}
+
+.reward-item span:nth-child(4) {
+    font-size: 20px;
+    margin-left: auto;
+}

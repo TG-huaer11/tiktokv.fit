@@ -1,0 +1,205 @@
+body {
+    background-color: white;
+}
+.bottom {
+    /* width: 100%; */
+   
+    position: absolute;
+    bottom: 0;
+    font-size: .875rem;
+    text-align: center;
+}
+.line2 {
+    font-weight: bold;
+    color: #2f80ed;
+}
+.line2 span {
+    font-weight: normal;
+}
+
+
+
+.line1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 9.375rem;
+}
+.goodList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.goodList img{
+    width: 100%;
+    height: 10rem;
+    background-size: 100% 100%;
+    border-radius: 0.2667rem;
+}
+.goodsItem {
+    position: relative;
+    border-radius: 1.25rem;
+    width: 10.5rem;
+    height: 13.9375rem;
+    padding: 4px;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    font-size: .75rem;
+    color: #7a6666;
+}
+.top {
+    background-color: #eef5ff;
+    padding: 1.375rem;
+    border-radius: 1.25rem;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.focus {
+    position: relative;
+    width: 100%;
+    height: 13.125rem;
+    margin-top: 0px;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    bottom: 0px;
+}
+
+.carousel li {
+    position: absolute;
+    /*绝对定位*/
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    opacity: 0;
+    transition: all 1s;
+    /*设置切换时过渡效果*/
+}
+
+.carousel li.opa {
+    /*li和.opa之间,无空格*/
+    opacity: 1;
+}
+
+.carousel li img {
+    width: 100%;
+    height: auto;
+    /*高度自适应*/
+    /*height: 100%; */
+    /*高度设为100%会超出容器高度*/
+    object-fit: cover;
+    /*图片自适应大小并保持原比例*/
+}
+
+.focus div {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    /*上移，使垂直居中*/
+    width: 36px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    z-index: 99;
+    cursor: pointer;
+    /*鼠标指针变为手型*/
+}
+
+.arrowLeft {
+    left: 10px;
+}
+
+.arrowRight {
+    right: 10px;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+    background-color: rgba(128, 128, 128, .5);
+}
+
+.disc {
+    position: absolute;
+    bottom: 0px;
+    right: 50%;
+    z-index: 99;
+}
+
+.disc li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #ccc;
+    margin: 0 3px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.disc li.current {
+    /*li和.current之间,无空格*/
+    background-color: #f00;
+
+}
+a {
+    color: #8f667f;
+    text-decoration: none;
+}
+.select {
+    
+    width: 14.875rem;
+    height: 2.25rem;
+    background-color: #eef5ff;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    color: #5480ed;
+}
+.boxShow {
+    display: none;
+    width: 9.4375rem;
+    padding: .2133rem .32rem;
+    height: 15rem;
+    background: #eef5ff;
+    border-radius: .1867rem;
+    opacity: 1;
+    position: absolute;
+    top: 5.625rem;
+    left: 1.25rem;
+    z-index: 2
+}
+
+.singleBox {
+    font-size: .75rem;
+    font-weight: 400;
+    color: #c4c4c4;
+    line-height: 1.5625rem;
+
+}
+
+.singleActive {
+    color: #2f80ed
+}

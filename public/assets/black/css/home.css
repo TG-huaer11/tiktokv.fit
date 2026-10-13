@@ -1,0 +1,77 @@
+.header-banner {
+    margin: 10px 16px 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 150px;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 150px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.reward {
+    margin-top: 10px;
+}
+
+.reward-title {
+    font-size: .48rem;
+    font-weight: 600;
+    color: #fffdff;
+    margin-left: .426667rem;
+    margin-bottom: .32rem;
+    height: .64rem;
+    line-height: .64rem
+}
+
+.reward-list {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reward-item {
+    height: 64px;
+    border-radius: 8px;
+    border: 1px solid #2C2C37;
+    background-color: #2C2C37;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    font-size: 12px;
+}
+
+.reward-item img {
+    width: 32px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.reward-item div:first-child {
+    margin-left: 15px;
+}
+
+.reward-item span:nth-child(2) {
+    margin-left: 5px;
+    color: rgba(253, 48, 117, 1);
+}
+
+.reward-item span:nth-child(3) {
+    margin-left: 5px;
+    color: rgba(216, 216, 216, 1);
+}
+
+.reward-item span:nth-child(4) {
+    color: rgba(247, 141, 24, 1);
+    font-size: 20px;
+    margin-left: auto;
+}

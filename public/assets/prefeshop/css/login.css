@@ -1,0 +1,105 @@
+.password-container {
+    display: flex;
+    flex-direction: column;
+}
+.password-container p {
+    color: #9796a1;
+    margin-bottom: .25rem;
+}
+
+
+body {
+    background-color: #f7f6f5;
+}
+
+input {
+    border: none;
+    outline: none;
+    width: 18.125rem;
+    height: 3.875rem;
+    /* color: rgba(197, 206, 226,0.5); */
+    font-size: 1rem;
+    padding-left: 1.25rem;
+    border-radius: .625rem;
+}
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login {
+    margin-top: 3.125rem;
+}
+h2 {
+    width: 90vw;
+    text-align: left;
+}
+.password-toggle {
+    position: absolute;
+    right: .625rem;
+    top: 1.25rem;
+}
+input::placeholder {
+    color: rgb(197, 206, 228); /* 在此处设置所需的颜色 */
+}
+h4 {
+    font-weight: normal;
+    color: #2f80ed;
+    font-size: .8125rem;
+}
+h4 span {
+    color: #9c5b5e;
+}
+.login_button {
+    width: 15.625rem;
+    height: 3.75rem;
+    background-color: #2f80ed;
+    border-radius: 2.5rem;
+    color: white;
+   line-height: 3.75rem;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+
+.select {
+    font-size: 1rem;
+    font-weight: normal;
+    width: 10.875rem;
+    height: 2.25rem;
+    background-color: #eef5ff;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    color: #5480ed;
+}
+.boxShow {
+    display: none;
+    width: 10rem;
+    padding: .2133rem .32rem;
+    height: 15rem;
+    background: #eef5ff;
+    border-radius: .1867rem;
+    opacity: 1;
+    position: absolute;
+    top: 16.46rem;
+    right: 1rem;
+    z-index: 2
+}
+
+.singleBox {
+    font-size: .75rem;
+    font-weight: 400;
+    color: #c4c4c4;
+    line-height: 1.5625rem;
+
+}
+
+.singleActive {
+    color: #2f80ed
+}
